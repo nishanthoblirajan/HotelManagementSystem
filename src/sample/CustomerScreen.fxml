@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerScreenController">
+   <children>
+      <JFXTreeTableView fx:id="treeView" layoutX="319.0" layoutY="24.0" prefHeight="607.0" prefWidth="1326.0" style="-fx-background-color: white; -fx-background-radius: 6px;" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <Pane layoutX="20.0" layoutY="636.0" prefHeight="80.0" prefWidth="1326.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+         <children>
+            <JFXTextField fx:id="searchText" focusColor="#09e2a7" labelFloat="true" layoutX="632.0" layoutY="28.0" promptText="Search by Room Number" />
+            <JFXButton buttonType="RAISED" layoutX="486.0" layoutY="25.0" onMouseClicked="#searchByRoomNumber" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a9;" text="Search" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="358.0" layoutY="25.0" onMouseClicked="#back" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a9;" text="Back" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

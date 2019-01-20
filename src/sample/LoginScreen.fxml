@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stackPane"
+           fx:controller="sample.LoginScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="720.0" style="-fx-background-image: url(loginscreen.jpg)">
+         <children>
+            <Pane layoutX="121.0" layoutY="50.0" prefHeight="500.0" prefWidth="500.0">
+               <children>
+                  <JFXTextField fx:id="username" focusColor="#09e2a7" labelFloat="true" layoutX="100.0" layoutY="250.0" prefWidth="300.0" promptText="Username" />
+                  <JFXTextField fx:id="password" focusColor="#09e2a7" labelFloat="true" layoutX="100.0" layoutY="296.0" prefWidth="300.0" promptText="Password" />
+                  <JFXButton buttonType="RAISED" layoutX="100.0" layoutY="365.0" onMouseClicked="#loginButton" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #09c2a7;" text="Login" />
+                  <JFXButton buttonType="RAISED" layoutX="300.0" layoutY="365.0" onMouseClicked="#cancelButton" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #09c2a7;" text="Cancel" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="150.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@hotellogin.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

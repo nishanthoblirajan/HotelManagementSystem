@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="stackPane" fx:controller="sample.RoomScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="730.0" prefWidth="1366.0">
+         <children>
+            <JFXTreeTableView fx:id="treeView" layoutX="449.0" layoutY="15.0" prefHeight="700.0" prefWidth="900.0" stylesheets="@hotel.css" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+            <Pane layoutX="14.0" layoutY="15.0" prefHeight="700.0" prefWidth="422.0" style="-fx-background-color: white; -fx-background-radius: 6px;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <Pane layoutX="12.0" layoutY="93.0" prefHeight="138.0" prefWidth="399.0" style="-fx-border-radius: 15; -fx-border-color: #ccc;">
+                     <children>
+                        <JFXTextField fx:id="search_text" focusColor="#09e2a7" layoutX="21.0" layoutY="29.0" prefHeight="25.0" prefWidth="357.0" promptText="Search by room number" />
+                        <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="81.0" onMouseClicked="#searchByRoomNumber" prefHeight="35.0" prefWidth="109.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Search" textFill="WHITE" />
+                        <JFXButton buttonType="RAISED" layoutX="210.0" layoutY="81.0" onMouseClicked="#makeItAvailable" prefHeight="35.0" prefWidth="109.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Available" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="12.0" layoutY="292.0" prefHeight="138.0" prefWidth="399.0" style="-fx-border-radius: 15; -fx-border-color: #ccc;">
+                     <children>
+                        <JFXCheckBox fx:id="busy" checkedColor="#09e2a7" layoutX="89.0" layoutY="36.0" onAction="#searchBusy" text="Busy" />
+                        <JFXCheckBox fx:id="available" checkedColor="#09e2a7" layoutX="216.0" layoutY="36.0" onAction="#searchAvailable" text="Available" />
+                        <JFXButton buttonType="RAISED" layoutX="131.0" layoutY="81.0" onMouseClicked="#searchByStatus" prefHeight="35.0" prefWidth="109.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Search" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="12.0" layoutY="492.0" prefHeight="138.0" prefWidth="399.0" style="-fx-border-radius: 15; -fx-border-color: #ccc;">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="71.0" layoutY="54.0" onMouseClicked="#goBack" prefHeight="35.0" prefWidth="109.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Back" textFill="WHITE" />
+                        <JFXButton buttonType="RAISED" layoutX="208.0" layoutY="54.0" onMouseClicked="#close" prefHeight="35.0" prefWidth="109.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Close" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="103.0" layoutY="47.0" text="You can search about room by room number and &#10;                     make it available">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="245.0" text="Search busy and available room by clicking on &#10;                          Busy or Available Button">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="116.0" layoutY="455.0" text="You can go back or Close the App">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
